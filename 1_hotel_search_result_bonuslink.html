@@ -33,14 +33,14 @@
                         sans: ["Poppins", "sans-serif"],
                     },
                     fontSize: {
-                        'xs': '0.92rem',
-                        'sm': '1.0rem',
-                        'base': '1.125rem',
-                        'lg': '1.25rem',
-                        'xl': '1.5rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2.25rem',
-                        '4xl': '2.5rem',
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '0.9375rem',
+                        'lg': '1.0625rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
                     },
                     boxShadow: {
                         'refined': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.08)',
@@ -167,7 +167,7 @@
     </style>
 </head>
 
-<body class="bg-bg-surface font-sans text-text-main antialiased pb-12 text-base">
+<body class="bg-bg-surface font-sans text-text-main antialiased pb-10 text-base">
 
     <!-- Sticky Header Container -->
     <nav class="sticky top-0 z-50 bg-white border-b-2 border-gray-100 shadow-refined relative">
@@ -240,7 +240,7 @@
                                 class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center border border-gray-200">
                                 <span class="material-icons-round text-gray-400 text-lg">hotel</span>
                             </div>
-                            <span class="font-medium text-sm">Select a hotel to view details</span>
+                            <span class="font-medium text-sm"></span>
                         </div>
 
                         <!-- Active State (Populated by JS) -->
@@ -274,39 +274,40 @@
 
         <!-- EXPANDABLE 1: Full Search Widget -->
         <div id="search-widget"
-            class="hidden bg-white border-b-2 border-gray-100 shadow-refined-lg absolute left-0 right-0 z-20 top-full expand-section">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white relative">
+            class="hidden bg-white border-b border-gray-100 shadow-refined absolute left-0 right-0 z-20 top-full expand-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4 bg-white relative">
+                <!-- Close Button - Positioned in the top padding area -->
                 <button onclick="toggleSection('search-widget')"
-                    class="absolute top-4 right-6 text-gray-400 hover:text-primary hover:bg-primary-light rounded-full p-1 transition-all duration-300 z-10">
-                    <span class="material-icons-round text-xl">close</span>
+                    class="absolute top-2 right-4 text-gray-400 hover:text-primary hover:bg-primary-light rounded-full p-1.5 transition-all duration-300 z-30 hover:scale-110">
+                    <span class="material-icons-round text-lg">close</span>
                 </button>
 
-                <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 pr-12 md:pr-0">
+                <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div
-                        class="bg-gray-50 px-4 py-3 rounded-xl border-2 border-gray-100 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white">
+                        class="h-12 bg-gray-50 px-3 rounded-lg border border-gray-200 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white group flex flex-col justify-center">
                         <label
-                            class="block text-xs uppercase text-text-muted font-bold mb-1 tracking-wide">Destination</label>
+                            class="block text-[10px] uppercase text-text-muted font-bold leading-none mb-0.5 tracking-wide group-focus-within:text-primary transition-colors">Destination</label>
                         <input type="text" value="Koh Samui (USM)"
-                            class="w-full bg-transparent border-none p-0 text-base font-bold text-secondary focus:ring-0">
+                            class="w-full bg-transparent border-none p-0 text-sm font-bold text-secondary focus:ring-0 placeholder-gray-400 leading-tight">
                     </div>
                     <div
-                        class="bg-gray-50 px-4 py-3 rounded-xl border-2 border-gray-100 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white">
+                        class="h-12 bg-gray-50 px-3 rounded-lg border border-gray-200 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white group flex flex-col justify-center">
                         <label
-                            class="block text-xs uppercase text-text-muted font-bold mb-1 tracking-wide">Dates</label>
+                            class="block text-[10px] uppercase text-text-muted font-bold leading-none mb-0.5 tracking-wide group-focus-within:text-primary transition-colors">Dates</label>
                         <input type="text" value="15 Jan - 20 Jan"
-                            class="w-full bg-transparent border-none p-0 text-base font-bold text-secondary focus:ring-0">
+                            class="w-full bg-transparent border-none p-0 text-sm font-bold text-secondary focus:ring-0 placeholder-gray-400 leading-tight">
                     </div>
                     <div
-                        class="bg-gray-50 px-4 py-3 rounded-xl border-2 border-gray-100 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white">
+                        class="h-12 bg-gray-50 px-3 rounded-lg border border-gray-200 hover:border-primary/30 transition-all duration-300 focus-within:border-primary focus-within:bg-white group flex flex-col justify-center">
                         <label
-                            class="block text-xs uppercase text-text-muted font-bold mb-1 tracking-wide">Guests</label>
+                            class="block text-[10px] uppercase text-text-muted font-bold leading-none mb-0.5 tracking-wide group-focus-within:text-primary transition-colors">Guests</label>
                         <select
-                            class="w-full bg-transparent border-none p-0 text-base font-bold text-secondary focus:ring-0">
+                            class="w-full bg-transparent border-none p-0 text-sm font-bold text-secondary focus:ring-0 cursor-pointer leading-tight">
                             <option>2 Adults, 1 Room</option>
                         </select>
                     </div>
                     <button type="button" onclick="toggleSection('search-widget')"
-                        class="bg-primary text-white font-bold uppercase text-sm rounded-xl shadow-blue hover:bg-primary-hover hover:shadow-blue-lg transition-all duration-300 h-full min-h-[58px] hover:-translate-y-0.5">
+                        class="h-12 bg-primary text-white font-bold uppercase text-xs rounded-lg shadow-sm hover:bg-primary-hover hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 w-full">
                         Update Search
                     </button>
                 </form>
@@ -314,7 +315,7 @@
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
 
         <!-- Header & Tools Row -->
         <div class="mb-5 flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-2">

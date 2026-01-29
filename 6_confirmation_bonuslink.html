@@ -6,6 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Bonuslink - Booking Confirmed</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
@@ -31,14 +33,14 @@
                         sans: ["Poppins", "sans-serif"],
                     },
                     fontSize: {
-                        'xs': '0.92rem',
-                        'sm': '1.0rem',
-                        'base': '1.125rem',
-                        'lg': '1.25rem',
-                        'xl': '1.5rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2.25rem',
-                        '4xl': '2.5rem',
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '0.9375rem',
+                        'lg': '1.0625rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
                     },
                     boxShadow: {
                         'refined': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.08)',
@@ -153,7 +155,7 @@
                             <span class="material-icons-round text-success text-4xl">check_circle</span>
                         </div>
                         <div class="text-left">
-                            <h1 class="text-2xl font-semibold text-secondary leading-tight">Your holiday is confirmed!
+                            <h1 class="text-2xl font-semibold text-secondary tracking-tight">Your holiday is confirmed!
                             </h1>
                             <p class="text-text-muted text-sm leading-tight mt-1">Thank you for booking with Bonuslink.
                             </p>
@@ -211,9 +213,28 @@
                                             <span class="font-medium text-text-main">Over-Water Suite</span>
                                         </div>
                                         <div>
+                                            <span class="text-xs text-text-muted uppercase font-bold block">Board
+                                                Basis</span>
+                                            <span class="font-medium text-text-main">All Inclusive</span>
+                                        </div>
+                                        <div>
                                             <span
                                                 class="text-xs text-text-muted uppercase font-bold block">Guests</span>
                                             <span class="font-medium text-text-main">2 Adults</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 pt-4 border-t border-gray-100">
+                                        <div class="flex items-start gap-2">
+                                            <span
+                                                class="material-icons-round text-success text-sm mt-0.5">event_available</span>
+                                            <div>
+                                                <p class="text-sm font-bold text-success">Free Cancellation available
+                                                </p>
+                                                <p class="text-xs text-text-muted">Cancel before <strong>21 Oct
+                                                        2024</strong> for a full refund. After this date, the booking is
+                                                    non-refundable.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -221,34 +242,34 @@
                         </div>
                     </div>
 
-                    <!-- Tour & Activity -->
-                    <div class="bg-white rounded-xl shadow-float border border-gray-200 overflow-hidden">
-                        <div class="p-6">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <span class="material-icons-round text-primary text-xl">surfing</span>
-                                </div>
-                                <h2 class="text-xl font-bold text-secondary">Tour & Activity</h2>
-                            </div>
+                    <!-- Cross-sell Placeholder -->
+                    <div class="bg-white rounded-xl shadow-float border border-gray-200 overflow-hidden p-6">
+                        <div
+                            class="border-2 border-dashed border-gray-200 rounded-lg bg-gray-50 flex flex-col items-center justify-center py-8 text-center h-full">
+                            <span class="material-icons-round text-gray-400 text-3xl mb-2">stars</span>
+                            <h3 class="text-sm font-bold text-gray-500">Upgrade Your Stay</h3>
+                            <p class="text-xs text-gray-400 mt-1 max-w-xs mx-auto">Exclusive partner offers and extras
+                                will be displayed here.</p>
+                        </div>
+                    </div>
 
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <img alt="Sunset Dolphin Cruise" class="w-full md:w-48 h-32 object-cover rounded-xl"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-CErogUhh9Za_TQX0H1-1rYTHN2YBWzUlsPCIMo27Rxipd3b2hcBJYHXCjzIjRguljTRPfRElIZjrpgHmXhsFBRSKm5lu_8xDgA_Yxd5ZiPaPWARkdLlJmZje_j6QQHoGzcQsQ6PJv9GNFtLX-vseCyMEZjV6jY4H7opXcFk1S7DDWDgBy1cXXwRgVu5SB6PW_zSmGcsZagAS8iSvkc-OalmZiFdxBLNgbqiUInL3PYQ3eIcWmmhWh75wAEuB5GaFtg5EK1ytMY" />
-                                <div class="flex-grow">
-                                    <h3 class="font-bold text-lg text-secondary">Sunset Dolphin Cruise</h3>
-                                    <div class="mt-4 grid grid-cols-2 gap-y-2 gap-x-8 text-sm">
-                                        <div>
-                                            <span class="text-xs text-text-muted uppercase font-bold block">Date</span>
-                                            <span class="font-medium text-text-main">Tue, 29 Oct 2024</span>
-                                        </div>
-                                        <div>
-                                            <span
-                                                class="text-xs text-text-muted uppercase font-bold block">Duration</span>
-                                            <span class="font-medium text-text-main">2 hours</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Terms & Conditions / Policies -->
+                    <div class="bg-white rounded-xl shadow-float border border-gray-200 overflow-hidden p-6">
+                        <h3 class="font-bold text-lg mb-4 text-secondary">Terms & Conditions</h3>
+                        <div class="text-xs text-text-muted space-y-3 leading-relaxed">
+                            <p><strong>General Policies:</strong> By proceeding with this booking, you agree to the
+                                hotel's terms regarding conduct, liability, and damages. The hotel reserves the right to
+                                refuse service to anyone for any reason.</p>
+
+                            <p><strong>Check-in/Check-out:</strong> Standard check-in time is 3:00 PM and check-out time
+                                is 11:00 AM. Requests for early check-in or late check-out are subject to availability
+                                and may incur a fee.</p>
+
+                            <p><strong>Taxes & Fees:</strong> City taxes and resort fees may be collected directly at
+                                the property upon arrival.</p>
+
+                            <p><strong>Privacy Policy:</strong> Your personal information is handled according to our
+                                privacy policy and local data protection regulations.</p>
                         </div>
                     </div>
 
@@ -324,7 +345,7 @@
                         <h3 class="font-bold text-lg mb-4 text-secondary">Payment Summary</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-text-muted">Hotel & Tour Total</span>
+                                <span class="text-text-muted">Hotel Total</span>
                                 <span class="text-black font-medium">MYR 6,550.00</span>
                             </div>
                             <div class="flex justify-between text-success">
@@ -377,9 +398,9 @@
             </div>
         </main>
 
-        <footer class="bg-white py-6 mt-auto border-t border-gray-100">
-            <div class="container mx-auto px-4 text-center">
-                <p class="text-xs text-text-muted">&copy; 2024 Bonuslink. All rights reserved.</p>
+        <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+            <div class="max-w-7xl mx-auto px-4 text-center text-text-muted text-xs">
+                &copy; 2026 Bonuslink. All rights reserved.
             </div>
         </footer>
     </div>

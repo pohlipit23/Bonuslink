@@ -33,25 +33,30 @@
                         sans: ["Poppins", "sans-serif"],
                     },
                     fontSize: {
-                        'xs': '0.92rem',
-                        'sm': '1.0rem',
-                        'base': '1.125rem',
-                        'lg': '1.25rem',
-                        'xl': '1.5rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2.25rem',
-                        '4xl': '2.5rem',
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '0.9375rem',
+                        'lg': '1.0625rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
                     },
                     boxShadow: {
                         'refined': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.08)',
                         'refined-lg': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 20px 30px -10px rgba(0, 0, 0, 0.12)',
+                        'refined-xl': '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 30px 60px -15px rgba(0, 0, 0, 0.15)',
                         'blue': '0 4px 14px 0 rgba(38, 170, 225, 0.15)',
+                        'blue-lg': '0 10px 25px -5px rgba(38, 170, 225, 0.25)',
+                        'inner-subtle': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.03)',
                         'subtle': '0 2px 10px -5px rgba(38, 170, 225, 0.15)',
                         'float': '0 5px 15px -5px rgba(0, 0, 0, 0.08)',
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.4s ease-out',
                         'slide-down': 'slideDown 0.3s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out',
+                        'highlight-pulse': 'highlightPulse 1s ease-out',
                         'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
                     },
                     keyframes: {
@@ -63,11 +68,19 @@
                             '0%': { opacity: '0', transform: 'translateY(-10px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        highlightPulse: {
+                            '0%': { backgroundColor: 'rgba(38, 170, 225, 0.1)' },
+                            '100%': { backgroundColor: 'transparent' }
+                        },
                         shake: {
-                            '10%, 90%': { transform: 'translated3d(-1px, 0, 0)' },
-                            '20%, 80%': { transform: 'translated3d(2px, 0, 0)' },
-                            '30%, 50%, 70%': { transform: 'translated3d(-4px, 0, 0)' },
-                            '40%, 60%': { transform: 'translated3d(4px, 0, 0)' }
+                            '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                            '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                            '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                            '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
                         }
                     }
                 },
@@ -81,7 +94,7 @@
     </style>
 </head>
 
-<body class="bg-bg-surface font-sans text-text-main antialiased pb-12 text-base">
+<body class="bg-bg-surface font-sans text-text-main antialiased pb-10 text-base">
 
     <!-- Sticky Header Container -->
     <nav class="sticky top-0 z-50 bg-white border-b-2 border-gray-100 shadow-refined relative">
@@ -96,21 +109,30 @@
                 <div class="flex items-center gap-3 pl-2 sm:border-l sm:border-gray-200 sm:ml-2">
                     <div class="hidden sm:flex flex-col items-end leading-none">
                         <span class="text-xs font-bold text-secondary">Hello, Viren</span>
-                        <span class="text-[10px] text-primary font-bold">50,000 Pts</span>
+                        <div class="flex items-center gap-1">
+                            <span class="text-[10px] text-primary font-bold">50,000</span>
+                            <img src="bonuslink_icon.png" class="h-3 w-3 object-contain">
+                        </div>
                     </div>
                     <button
                         class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-sm">
                         <span class="material-icons-round text-xl">person</span>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-sm relative">
+                        <span class="material-icons-round text-xl">shopping_cart</span>
+                        <span
+                            class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">1</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
         <!-- Page Title -->
         <div class="mb-6">
-            <h1 class="text-2xl font-bold text-secondary tracking-tight">Secure Payment</h1>
+            <h1 class="text-2xl font-semibold text-secondary tracking-tight">Secure Payment</h1>
             <p class="text-text-muted mt-1 text-xs">Complete your booking securely with Bonuslink.</p>
         </div>
 
@@ -172,9 +194,9 @@
                         </p>
 
                         <button onclick="window.location.href='#'"
-                            class="bg-primary text-white px-8 py-3 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-primary-hover shadow-blue hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 mx-auto">
+                            class="bg-primary text-white px-8 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wide hover:bg-primary-hover shadow-blue-lg hover:shadow-blue hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 mx-auto">
                             Retry Payment
-                            <span class="material-icons-round text-lg">refresh</span>
+                            <span class="material-icons-round text-sm">refresh</span>
                         </button>
                     </div>
 
@@ -191,7 +213,7 @@
 
             <!-- Right Column: Summary -->
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-xl shadow-float border border-gray-100 p-5 sticky top-24">
+                <div class="bg-white rounded-xl shadow-float border border-gray-200 p-5 sticky top-20">
                     <h3 class="font-bold text-base mb-3 text-secondary">Your package summary</h3>
 
                     <!-- Hotel Summary -->

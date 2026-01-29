@@ -36,14 +36,14 @@
                         sans: ["Poppins", "sans-serif"],
                     },
                     fontSize: {
-                        'xs': '0.92rem',
-                        'sm': '1.0rem',
-                        'base': '1.125rem',
-                        'lg': '1.25rem',
-                        'xl': '1.5rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2.25rem',
-                        '4xl': '2.5rem',
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '0.9375rem',
+                        'lg': '1.0625rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
                     },
                     boxShadow: {
                         'refined': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.08)',
@@ -150,7 +150,7 @@
     </style>
 </head>
 
-<body class="bg-bg-surface font-sans text-text-main antialiased pb-12 text-base">
+<body class="bg-bg-surface font-sans text-text-main antialiased pb-10 text-base">
 
     <!-- Sticky Header Container -->
     <nav class="sticky top-0 z-50 bg-white border-b-2 border-gray-100 shadow-refined relative">
@@ -201,7 +201,7 @@
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
         <div class="mb-5">
             <h1 class="text-2xl font-semibold text-secondary tracking-tight">Your Holiday</h1>
             <p class="text-xs text-text-muted font-medium mt-1">Review your items below. Complete your booking before
@@ -375,8 +375,9 @@
                     <p class="text-xs text-text-muted mt-1 text-right">Includes taxes and fees</p>
 
                     <button
-                        class="bg-primary text-white w-full py-3 rounded-lg font-bold text-sm mt-5 hover:bg-primary-hover shadow-subtle uppercase tracking-wide transition-all transform active:scale-[0.98]">
-                        Continue to Book
+                        class="bg-primary text-white w-full py-3.5 rounded-lg font-bold text-sm mt-5 hover:bg-primary-hover shadow-blue-lg hover:shadow-blue transition-all transform active:scale-[0.98] flex items-center justify-center gap-2">
+                        <span>Continue to Book</span>
+                        <span class="material-icons-round text-sm">arrow_forward</span>
                     </button>
 
                     <p class="text-xs text-text-muted mt-2 text-center">Price held for <span
@@ -397,8 +398,6 @@
             </div>
 
         </div>
-    </main>
-
     </main>
 
     <footer class="bg-white border-t border-gray-200 py-6 mt-auto">

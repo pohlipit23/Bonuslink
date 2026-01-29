@@ -33,14 +33,14 @@
                         sans: ["Poppins", "sans-serif"],
                     },
                     fontSize: {
-                        'xs': '0.92rem',
-                        'sm': '1.0rem',
-                        'base': '1.125rem',
-                        'lg': '1.25rem',
-                        'xl': '1.5rem',
-                        '2xl': '1.75rem',
-                        '3xl': '2.25rem',
-                        '4xl': '2.5rem',
+                        'xs': '0.75rem',
+                        'sm': '0.875rem',
+                        'base': '0.9375rem',
+                        'lg': '1.0625rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                        '3xl': '1.875rem',
+                        '4xl': '2.25rem',
                     },
                     boxShadow: {
                         'refined': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.08)',
@@ -124,7 +124,7 @@
     </style>
 </head>
 
-<body class="bg-bg-surface font-sans text-text-main antialiased pb-10 text-base">
+<body class="bg-bg-surface font-sans text-text-main antialiased pb-10 text-base" x-data="{ showRoomDetails: false }">
     <div class="flex flex-col min-h-screen">
         <!-- Sticky Header Container -->
         <nav class="sticky top-0 z-50 bg-white border-b-2 border-gray-100 shadow-refined relative">
@@ -163,6 +163,16 @@
         </nav>
 
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
+            <!-- Back Navigation -->
+            <div class="mb-4">
+                <a href="1_hotel_search_result_bonuslink.html"
+                    class="inline-flex items-center text-text-muted hover:text-primary transition-colors font-medium text-sm group">
+                    <span
+                        class="material-icons-round text-lg mr-1 group-hover:-translate-x-1 transition-transform duration-300">arrow_back</span>
+                    All properties in Maldives
+                </a>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2">
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6">
@@ -195,7 +205,7 @@
                         <div class="p-5 md:p-6">
                             <div class="flex justify-between items-start gap-4">
                                 <div>
-                                    <h1 class="text-2xl font-semibold text-secondary mb-1">Cinnamon Dhonveli Maldives
+                                    <h1 class="text-2xl font-semibold text-secondary tracking-tight mb-1">Cinnamon Dhonveli Maldives
                                     </h1>
                                     <p class="text-text-muted text-sm flex items-center gap-1"><span
                                             class="material-icons-round text-primary text-base">location_on</span> North
@@ -266,12 +276,13 @@
                                             <div class="md:w-2/3 flex flex-col">
                                                 <div class="flex justify-between items-start mb-2">
                                                     <h3 class="text-xl font-bold text-secondary">Over-Water Suite</h3>
-                                                    <span class="text-lg font-bold text-primary">+0 MYR</span>
+                                                    <span class="text-lg font-bold text-primary">+MYR 0</span>
                                                 </div>
                                                 <div class="text-sm text-text-muted mb-2">
                                                     <p>1 king bed | 90m² | Balcony | Sea view</p>
                                                     <a class="text-primary font-bold hover:underline text-sm mt-1 inline-block"
-                                                        href="#">Room details</a>
+                                                        href="#" @click.prevent="showRoomDetails = true">Room
+                                                        details</a>
                                                 </div>
                                                 <div class="flex flex-wrap gap-2 mb-4">
                                                     <span
@@ -305,12 +316,12 @@
                                                     <button
                                                         class="flex-1 text-left border border-gray-200 hover:border-primary text-text-muted hover:text-primary px-3 py-2 rounded-lg text-xs min-w-[100px] transition-all">
                                                         <p class="font-bold">Full board</p>
-                                                        <p>+1,320 MYR</p>
+                                                        <p>+MYR 1,320</p>
                                                     </button>
                                                     <button
                                                         class="flex-1 text-left border border-gray-200 hover:border-primary text-text-muted hover:text-primary px-3 py-2 rounded-lg text-xs min-w-[100px] transition-all">
                                                         <p class="font-bold">Room only</p>
-                                                        <p>-440 MYR</p>
+                                                        <p>-MYR 440</p>
                                                     </button>
                                                 </div>
                                             </div>
@@ -340,7 +351,7 @@
                                                             <p class="text-xs text-green-600">Details</p>
                                                         </div>
                                                         <div class="text-right">
-                                                            <p class="font-bold text-primary text-xs mb-1">+660 MYR</p>
+                                                            <p class="font-bold text-primary text-xs mb-1">+MYR 660</p>
                                                             <button
                                                                 class="border border-primary text-primary px-4 py-1.5 rounded font-bold text-xs hover:bg-primary hover:text-white transition-colors">Select</button>
                                                         </div>
@@ -378,12 +389,13 @@
                                             <div class="md:w-2/3 flex flex-col">
                                                 <div class="flex justify-between items-start mb-2">
                                                     <h3 class="text-xl font-bold text-secondary">Beach Suite</h3>
-                                                    <span class="text-lg font-bold text-primary">+1,100 MYR</span>
+                                                    <span class="text-lg font-bold text-primary">+MYR 1,100</span>
                                                 </div>
                                                 <div class="text-sm text-text-muted mb-4">
                                                     <p>1 king bed | 120m² | Private pool | Beach access</p>
                                                     <a class="text-primary font-bold hover:underline text-sm mt-1 inline-block"
-                                                        href="#">Room details</a>
+                                                        href="#" @click.prevent="showRoomDetails = true">Room
+                                                        details</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -562,82 +574,105 @@
                 </div>
                 <div class="lg:col-span-1 space-y-5">
                     <div class="bg-white rounded-xl shadow-float border border-gray-200 p-5 sticky top-20">
-                        <h3 class="font-bold text-lg mb-3 text-secondary">Your package summary</h3>
+                        <h3 class="font-bold text-lg mb-4 text-secondary">Your package summary</h3>
 
-                        <!-- Hotel Summary -->
-                        <div class="flex gap-3 mb-3">
-                            <img alt="Cinnamon Dhonveli Maldives"
-                                class="w-16 h-16 object-cover rounded-lg flex-shrink-0"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0rw0noDZs_ppQdGkbZJm31tiG67K-9kI0-ghQF7lMHDP7l99G-XYQhzGiU_b8bVcnNxTvF_hi6s8X6gyO2Ncjggsf8kYLsBXoubgEimt9iCDh8SUJszXu7xI6sHR7xhoDhj4nGDNX9cZmYOt3UUUE2uR3LGMLWAA7OD-Y5NkTv6yCovS8kAwTRlg9RavDvz8VjmlVgsLmplPlBWeyLQSgH0u4fgvmmT8IA2-WR_Fjmp_k7ew4CXOgDubZ1Wgp4hhcBxqfDCCdpSU" />
-                            <div>
-                                <h4 class="font-bold text-sm text-secondary leading-tight">Cinnamon Dhonveli Maldives
-                                </h4>
-                                <p class="text-xs text-text-muted mt-0.5">4 nights, 2 adults</p>
-                                <p class="text-xs text-text-muted">Over-Water Suite</p>
+                        <!-- Product: Hotel -->
+                        <div class="mb-4 group">
+                            <!-- Product Type Header -->
+                            <h4
+                                class="font-bold text-xs uppercase text-text-muted tracking-wide mb-3 flex items-center gap-2">
+                                <span class="material-icons-round text-sm text-primary">hotel</span>
+                                Hotel
+                            </h4>
+
+                            <!-- Product Details Row -->
+                            <div class="flex gap-3 mb-3">
+                                <img alt="Cinnamon Dhonveli Maldives"
+                                    class="w-16 h-16 object-cover rounded-lg flex-shrink-0 shadow-sm border border-gray-100"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0rw0noDZs_ppQdGkbZJm31tiG67K-9kI0-ghQF7lMHDP7l99G-XYQhzGiU_b8bVcnNxTvF_hi6s8X6gyO2Ncjggsf8kYLsBXoubgEimt9iCDh8SUJszXu7xI6sHR7xhoDhj4nGDNX9cZmYOt3UUUE2uR3LGMLWAA7OD-Y5NkTv6yCovS8kAwTRlg9RavDvz8VjmlVgsLmplPlBWeyLQSgH0u4fgvmmT8IA2-WR_Fjmp_k7ew4CXOgDubZ1Wgp4hhcBxqfDCCdpSU" />
+                                <div>
+                                    <h4 class="font-bold text-sm text-secondary leading-tight mb-1">Cinnamon Dhonveli
+                                        Maldives
+                                    </h4>
+                                    <p class="text-xs text-text-muted mb-2">4 nights, 2 adults</p>
+
+                                    <!-- Room & Board (Icon Style) -->
+                                    <div class="flex flex-wrap gap-2">
+                                        <div class="inline-flex items-center gap-1.5 bg-gray-50 px-2 py-1 rounded-md border border-gray-100 text-xs text-text-main"
+                                            title="Room Type">
+                                            <span class="material-icons-round text-primary text-[14px]">bed</span>
+                                            <span class="truncate max-w-[120px]">Over-Water Suite</span>
+                                        </div>
+                                        <div class="inline-flex items-center gap-1.5 bg-gray-50 px-2 py-1 rounded-md border border-gray-100 text-xs text-text-main"
+                                            title="Board Type">
+                                            <span
+                                                class="material-icons-round text-primary text-[14px]">restaurant_menu</span>
+                                            <span>Breakfast</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Price Summary -->
+                            <div class="flex justify-between items-center text-sm pt-2 pl-1">
+                                <span class="text-text-muted text-xs">Hotel subtotal</span>
+                                <span class="font-bold text-secondary">MYR 7,711.00</span>
                             </div>
                         </div>
 
-                        <div class="border-t border-gray-100 my-3"></div>
+                        <!-- Scalability Example: Placeholder for another product (Hidden by default, can be uncommented or dynamically added) -->
+                        <!-- 
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-xs uppercase text-text-muted tracking-wide mb-3 flex items-center gap-2">
+                                <span class="material-icons-round text-sm text-primary">flight</span>
+                                Flight
+                            </h4>
+                            ... Content ...
+                        </div> 
+                        -->
 
-                        <!-- Booking Details (Hotel Only) -->
+                        <div class="border-t border-gray-200 my-5"></div>
+
+                        <!-- Total Section -->
                         <div class="space-y-3">
-                            <h4 class="font-bold text-xs uppercase text-text-muted tracking-wide">Booking Details</h4>
-                            <div class="grid grid-cols-2 gap-3 text-sm">
-                                <div>
-                                    <p class="text-xs text-text-muted">Room Type</p>
-                                    <p class="font-bold text-secondary leading-tight">Over-Water Suite</p>
+                            <div class="flex justify-between text-sm text-success">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons-round text-xs">local_offer</span> Discount</span>
+                                <span class="font-bold">-MYR 2,354.00</span>
+                            </div>
+
+                            <div class="flex justify-between items-start pt-1">
+                                <span class="font-bold text-lg text-secondary pt-1">Total</span>
+                                <div class="text-right space-y-1">
+                                    <p class="font-bold text-2xl text-black leading-none">MYR 5,357.00</p>
+                                    <p class="text-xs text-text-muted">Includes taxes and fees</p>
                                 </div>
-                                <div>
-                                    <p class="text-xs text-text-muted">Board Type</p>
-                                    <p class="font-bold text-secondary leading-tight">Breakfast Included</p>
+                            </div>
+
+                            <!-- Points (Bonuslink Specific) -->
+                            <div
+                                class="bg-primary/5 rounded-lg p-2 flex items-center justify-between border border-primary/10">
+                                <span class="text-xs font-bold text-primary">Points to earn</span>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-bold text-primary">535,700</span>
+                                    <img src="bonuslink_icon.png" class="h-3.5 w-3.5 object-contain">
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="border-t border-gray-100 my-4"></div>
-
-                        <!-- Price Breakdown -->
-                        <div class="space-y-2 text-sm">
-                            <div class="flex justify-between">
-                                <span class="text-text-muted">2 travellers</span>
-                                <span class="text-secondary font-medium">7,711.00 MYR</span>
-                            </div>
-                            <div class="flex justify-between text-success">
-                                <span>Discount</span>
-                                <span>-2,354.00 MYR</span>
-                            </div>
-                        </div>
-
-                        <div class="border-t border-gray-100 my-4"></div>
-
-                        <!-- Total -->
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-lg text-secondary">Total</span>
                             <div class="text-right">
-                                <p class="font-bold text-2xl text-black">5,357.00 MYR</p>
-                                <div class="text-xs font-bold text-primary flex items-center justify-end gap-1 mt-1">
-                                    Earn 535,700 <img src="bonuslink_icon.png" class="h-3 w-3 object-contain">
-                                </div>
-                                <p class="text-xs text-text-muted mt-1">2,678.50 MYR per person</p>
+                                <p class="text-xs text-text-muted">MYR 2,678.50 per person</p>
                             </div>
                         </div>
-                        <p class="text-xs text-text-muted mt-1 text-right">Includes taxes and fees</p>
 
                         <button
-                            class="bg-primary text-white w-full py-3 rounded-lg font-bold text-sm mt-5 hover:bg-primary-hover shadow-subtle uppercase tracking-wide transition-all transform active:scale-[0.98]">Continue
-                            Booking</button>
+                            class="bg-primary text-white w-full py-3.5 rounded-lg font-bold text-sm mt-5 hover:bg-primary-hover shadow-blue-lg hover:shadow-blue transition-all transform active:scale-[0.98] flex items-center justify-center gap-2">
+                            <span>Continue Booking</span>
+                            <span class="material-icons-round text-sm">arrow_forward</span>
+                        </button>
 
-                        <p class="text-xs text-text-muted mt-2 text-center">Price held for <span
+                        <p class="text-xs text-text-muted mt-3 text-center">Price held for <span
                                 class="font-bold text-secondary">18:32</span></p>
-
-                        <div class="mt-5 text-xs text-text-main">
-                            <div class="flex items-center text-success">
-                                <span class="material-icons-round mr-1 text-sm">check_circle</span>
-                                <span class="font-semibold">ATOL protected</span>
-                                <span class="material-icons-round text-xs ml-1"
-                                    title="Some of the flights and flight-inclusive holidays on this website are financially protected by the ATOL scheme.">info_outline</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -649,6 +684,186 @@
         </footer>
     </div>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Room Details Modal -->
+    <div x-show="showRoomDetails" class="relative z-[100]" aria-labelledby="modal-title" role="dialog" aria-modal="true"
+        style="display: none;">
+        <div x-show="showRoomDetails" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+            class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" @click="showRoomDetails = false">
+        </div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div x-show="showRoomDetails" x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl border border-gray-100">
+
+                    <!-- Header -->
+                    <div
+                        class="bg-white px-6 py-4 border-b border-gray-100 flex justify-between items-center sticky top-0 z-20">
+                        <div>
+                            <h3 class="text-xl font-bold leading-6 text-secondary" id="modal-title">Over-Water Suite
+                            </h3>
+                            <p class="text-sm text-text-muted mt-1">Superior luxury with panoramic ocean views</p>
+                        </div>
+                        <button @click="showRoomDetails = false"
+                            class="rounded-full bg-gray-100 p-2 hover:bg-gray-200 transition-colors">
+                            <span class="material-icons-round text-gray-500">close</span>
+                        </button>
+                    </div>
+
+                    <!-- Scrollable Content -->
+                    <div class="px-6 py-6 max-h-[80vh] overflow-y-auto custom-scrollbar">
+                        <!-- Image Gallery Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8 h-[300px] md:h-[400px]">
+                            <!-- Main Large Image -->
+                            <div class="md:col-span-2 relative h-full rounded-xl overflow-hidden group">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeEnBdaO_e2rZkGLeHWddV8SkEYAzVPVlNUURRm0cR9gQTTNb6wTVV3xUoJbdaXntyA_qrwPt4WRV9M2nbKcJ51G0YN3OMZdwRiikeitaHX68zugzyZV9HpC1Jth8XAM7cwcn2HpSWTxj58Kssh5_xFESljykWAxkA8-GRt4EEimnMosMdojGR0Fry6FzGONj9wyKv04XVNUkNZBA8c6pKvC87kySYPtysQQDWin4SXouX6iNx92mzcVOVRG40WaKpMHqGN6a6GZs"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    alt="Master Bedroom">
+                                <div
+                                    class="absolute bottom-3 left-3 bg-black/50 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                                    Master Bedroom
+                                </div>
+                            </div>
+                            <!-- Side Stacked Images -->
+                            <div class="flex flex-col gap-3 h-full">
+                                <div class="relative h-1/2 rounded-xl overflow-hidden group">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuActR3Yv4L8aEhz8t1OtW8gDIxOiqm4Nj4ak1LrYlyKEaZtoJKtTwWB8PqMqQXEypPxVGQxNthNStdaCIawnJALW7z0wmltHASmK8vFvUBT20NJsMCwNW_v9nuMoRAd8HPTyQtIyrgHmF0DfGTSrQjlLeuc2KNJM5QEr-2YVzbOIV7M4yNZL9xbuQ0KwOPWR9z1ObQ2jgw7nrLMvZTOe3H3u6fW7UInqo8daSH5aCVIE_x37UWOcEUsDyWNXefgaVzsTkpFXhJS7kE"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        alt="Luxury Bathroom">
+                                    <div
+                                        class="absolute bottom-3 left-3 bg-black/50 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                                        Bathroom
+                                    </div>
+                                </div>
+                                <div class="relative h-1/2 rounded-xl overflow-hidden group">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cYoMdEWiWV3A1ohMw6V8KoFJpUoQ66hkAmbNEKGA2qIrlTgYR4hNizukIYiaeeGWdQxs5ok3M83aLK9WioT_cscymURz5ENf_2bRe9v69iRLtG46nKXsT3aEwVtPHYGV6uwz1IYKyIYQSE6D3WmJUS_rOdh7O94f1qhRmnW_AcbgoCvth7LU9P6HG1WoJRrCBXjyrVfJf3OpHNsFOLY9h5Wm4tAWCx9ng3ylQ_ssGnc40Jm0T2wJhi1jXVvQ78Xj6VtkgHlw7RE"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        alt="Private Deck">
+                                    <div
+                                        class="absolute bottom-3 left-3 bg-black/50 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                                        Private Pool
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h4 class="font-bold text-lg text-secondary mb-3">Room Overview</h4>
+                                <p class="text-sm text-text-muted leading-relaxed mb-6">
+                                    Experience the ultimate Maldives getaway in our Over-Water Suites. Perched above the
+                                    turquoise lagoon, these suites offer direct access to the ocean from your private
+                                    sun deck. The interior features a spacious bedroom with a king-sized bed, a modern
+                                    bathroom with a bathtub, and glass floor panels to watch the marine life below.
+                                </p>
+
+                                <h4 class="font-bold text-lg text-secondary mb-3">Room Highlights</h4>
+                                <div class="bg-primary/5 rounded-xl p-5 border border-primary/10 mb-6">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex items-start gap-3">
+                                            <div class="p-2 bg-white rounded-lg shadow-sm text-primary">
+                                                <span class="material-icons-round text-xl">king_bed</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-secondary text-sm">King Size Bed</p>
+                                                <p class="text-xs text-text-muted">Premium linen</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="p-2 bg-white rounded-lg shadow-sm text-primary">
+                                                <span class="material-icons-round text-xl">pool</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-secondary text-sm">Private Deck</p>
+                                                <p class="text-xs text-text-muted">Direct ocean access</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="p-2 bg-white rounded-lg shadow-sm text-primary">
+                                                <span class="material-icons-round text-xl">open_with</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-secondary text-sm">90 m²</p>
+                                                <p class="text-xs text-text-muted">Spacious living</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <div class="p-2 bg-white rounded-lg shadow-sm text-primary">
+                                                <span class="material-icons-round text-xl">visibility</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-secondary text-sm">Ocean View</p>
+                                                <p class="text-xs text-text-muted">Panoramic vistas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Amenities Column -->
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary mb-4">Amenities</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Free Wi-Fi
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Air conditioning
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Minibar
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Safe
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Bathtub
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Rain shower
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Hairdryer
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Tea/Coffee maker
+                                    </li>
+                                    <li class="flex items-center gap-3 text-sm text-text-muted">
+                                        <span class="material-icons-round text-green-500 text-base">check</span>
+                                        Flat-screen TV
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="bg-gray-50 px-6 py-4 border-t border-gray-100 sm:flex sm:flex-row-reverse gap-3">
+                        <button type="button" @click="showRoomDetails = false"
+                            class="w-full inline-flex justify-center rounded-lg border border-transparent bg-primary px-4 py-2 text-base font-bold text-white shadow-sm hover:bg-primary-hover focus:outline-none sm:w-auto sm:text-sm transition-colors">
+                            Close Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
