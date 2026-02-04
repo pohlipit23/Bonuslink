@@ -171,19 +171,17 @@
                 <!-- Desktop Nav Links -->
                 <div class="hidden lg:flex items-center gap-6 ml-4">
                     <a href="https://www.bonuslink.com.my/products" target="_blank"
-                        class="text-xs font-bold uppercase text-text-muted hover:text-primary transition-colors tracking-wide">Earn
-                        Redeem</a>
+                        class="text-xs font-bold text-text-muted hover:text-primary transition-colors tracking-wide">Redeem</a>
                     <a href="https://www.bonuslink.com.my/stores" target="_blank"
-                        class="text-xs font-bold uppercase text-text-muted hover:text-primary transition-colors tracking-wide">Shop</a>
+                        class="text-xs font-bold text-text-muted hover:text-primary transition-colors tracking-wide">Shop</a>
                     <a href="https://www.bonuslink.com.my/brands" target="_blank"
-                        class="text-xs font-bold uppercase text-text-muted hover:text-primary transition-colors tracking-wide">Brands</a>
+                        class="text-xs font-bold text-text-muted hover:text-primary transition-colors tracking-wide">Brands</a>
                     <a href="https://www.bonuslink.com.my/promotions" target="_blank"
-                        class="text-xs font-bold uppercase text-text-muted hover:text-primary transition-colors tracking-wide">Promotions</a>
+                        class="text-xs font-bold text-text-muted hover:text-primary transition-colors tracking-wide">Promotions</a>
                     <a href="https://www.bonuslink.com.my/travel" target="_blank"
-                        class="text-xs font-bold uppercase text-text-muted hover:text-primary transition-colors tracking-wide">Travel</a>
+                        class="text-xs font-bold text-text-muted hover:text-primary transition-colors tracking-wide flex items-center gap-1.5">Travel
+                        <span class="bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">New</span></a>
                 </div>
-
-                <div class="h-6 w-px bg-gray-200 hidden lg:block"></div>
             </div>
             <div class="flex items-center gap-3">
                 <button class="text-xs font-bold text-text-muted hover:text-primary transition-colors">MYR</button>
@@ -197,13 +195,6 @@
                     <button
                         class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-sm">
                         <span class="material-icons-round text-xl">person</span>
-                    </button>
-                    <!-- Shopping Cart Icon -->
-                    <button
-                        class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-sm relative">
-                        <span class="material-icons-round text-xl">shopping_cart</span>
-                        <span
-                            class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">1</span>
                     </button>
                 </div>
             </div>
@@ -238,16 +229,16 @@
 
         <div class="flex flex-col py-4">
             <a href="https://www.bonuslink.com.my/products" target="_blank"
-                class="px-6 py-3 text-sm font-bold uppercase text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Earn
-                Redeem</a>
+                class="px-6 py-3 text-sm font-bold text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Redeem</a>
             <a href="https://www.bonuslink.com.my/stores" target="_blank"
-                class="px-6 py-3 text-sm font-bold uppercase text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Shop</a>
+                class="px-6 py-3 text-sm font-bold text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Shop</a>
             <a href="https://www.bonuslink.com.my/brands" target="_blank"
-                class="px-6 py-3 text-sm font-bold uppercase text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Brands</a>
+                class="px-6 py-3 text-sm font-bold text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Brands</a>
             <a href="https://www.bonuslink.com.my/promotions" target="_blank"
-                class="px-6 py-3 text-sm font-bold uppercase text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Promotions</a>
+                class="px-6 py-3 text-sm font-bold text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Promotions</a>
             <a href="https://www.bonuslink.com.my/travel" target="_blank"
-                class="px-6 py-3 text-sm font-bold uppercase text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary">Travel</a>
+                class="px-6 py-3 text-sm font-bold text-text-main hover:bg-primary/5 hover:text-primary transition-colors border-l-4 border-transparent hover:border-primary flex items-center gap-2">Travel
+                <span class="bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">New</span></a>
         </div>
 
         <div class="mt-auto p-6 bg-gray-50 text-xs text-text-muted">
@@ -469,7 +460,8 @@
 
             <!-- Right Column: Price Summary -->
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-xl shadow-refined-lg border border-gray-200 p-5 sticky top-20">
+                <div class="sticky top-20 space-y-5">
+                <div class="bg-white rounded-xl shadow-refined-lg border border-gray-200 p-5">
                     <h3 class="font-display font-bold text-lg mb-3 text-secondary">Price Summary</h3>
 
                     <!-- Price Breakdown -->
@@ -498,11 +490,6 @@
                             <p class="text-xs text-text-muted">MYR 2,150 per person</p>
                         </div>
                     </div>
-                    <!-- Bonuslink Point Calculation -->
-                    <div class="flex justify-end items-center gap-1 mt-1">
-                        <span class="text-xs font-bold text-primary">Earn 21,500</span>
-                        <img src="bonuslink_icon.png" class="h-3 w-3 object-contain">
-                    </div>
                     <p class="text-xs text-text-muted mt-1 text-right">Includes taxes and fees</p>
 
                     <button
@@ -514,17 +501,23 @@
                     <p class="text-xs text-text-muted mt-2 text-center">Price held for <span
                             class="font-bold text-secondary">18:32</span></p>
 
-                    <div class="mt-5 text-xs text-text-main">
-                        <div class="flex items-center text-success">
-                            <span class="material-icons-round mr-1 text-sm">check_circle</span>
-                            <span class="font-semibold">Best Price Guaranteed</span>
-                        </div>
-                        <p class="flex items-start text-gray-400 mt-2">
-                            <span class="material-icons-round text-xs mr-1">lock</span>
-                            <span>Your data is secure. We use 256-bit encryption.</span>
-                        </p>
-                    </div>
+                    <p class="flex items-start text-gray-400 mt-4 text-xs">
+                        <span class="material-icons-round text-xs mr-1">lock</span>
+                        <span>Your data is secure. We use 256-bit encryption.</span>
+                    </p>
 
+                </div>
+
+                <!-- Points Earning Info -->
+                <div class="bg-[#F0FDF4] rounded-xl border border-[#DCFCE7] p-5 flex items-start gap-4 shadow-sm">
+                    <div class="flex-shrink-0 mt-0.5">
+                        <span class="material-icons-round text-primary text-3xl">verified</span>
+                    </div>
+                    <p class="text-sm text-text-main font-medium leading-relaxed">
+                        Your BonusLink Account will be credited with <span class="text-primary font-bold">125,000
+                            Points</span> after you complete your trip.
+                    </p>
+                </div>
                 </div>
             </div>
 
